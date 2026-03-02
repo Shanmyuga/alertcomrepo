@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlertCom News</title>
+  <script>
+    // Redirect to dashboard if already logged in, otherwise to login
+    fetch('/api/auth/me')
+      .then(r => r.ok ? window.location.replace('/dashboard.html') : window.location.replace('/login.html'))
+      .catch(() => window.location.replace('/login.html'));
+  </script>
+</head>
+<body></body>
+</html>

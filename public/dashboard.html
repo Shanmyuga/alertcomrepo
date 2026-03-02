@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – AlertCom News</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="dashboard-page">
+
+  <!-- ── Top Navigation ──────────────────────────────────────────────── -->
+  <header class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+        AlertCom News
+      </div>
+      <div class="topnav-right">
+        <span class="topnav-username" id="nav-username"></span>
+        <button class="btn btn-outline btn-sm" id="logout-btn">Sign Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+
+    <!-- ── Interests Panel ──────────────────────────────────────────── -->
+    <section class="panel interests-panel">
+      <h2 class="panel-title">Areas of Interest</h2>
+      <p class="panel-subtitle">Select up to 4 categories and add up to 10 keywords each.</p>
+
+      <div class="categories-grid">
+
+        <!-- Sports -->
+        <div class="category-card" data-category="sports">
+          <div class="category-header">
+            <div class="category-icon sports">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93 19.07 19.07"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+            </div>
+            <div class="category-info">
+              <span class="category-name">Sports</span>
+              <span class="keyword-count"></span>
+            </div>
+            <label class="toggle-switch" aria-label="Toggle Sports">
+              <input type="checkbox" class="category-toggle" data-category="sports">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="keyword-section hidden">
+            <div class="keyword-tags" data-category="sports"></div>
+            <div class="keyword-input-row">
+              <input type="text" class="keyword-input" placeholder="Add a keyword…" maxlength="50" data-category="sports">
+              <button class="btn btn-sm btn-secondary add-keyword-btn" data-category="sports">Add</button>
+            </div>
+            <p class="keyword-hint">Press Enter or click Add. Max 10 keywords.</p>
+          </div>
+        </div>
+
+        <!-- Business -->
+        <div class="category-card" data-category="business">
+          <div class="category-header">
+            <div class="category-icon business">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="category-info">
+              <span class="category-name">Business</span>
+              <span class="keyword-count"></span>
+            </div>
+            <label class="toggle-switch" aria-label="Toggle Business">
+              <input type="checkbox" class="category-toggle" data-category="business">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="keyword-section hidden">
+            <div class="keyword-tags" data-category="business"></div>
+            <div class="keyword-input-row">
+              <input type="text" class="keyword-input" placeholder="Add a keyword…" maxlength="50" data-category="business">
+              <button class="btn btn-sm btn-secondary add-keyword-btn" data-category="business">Add</button>
+            </div>
+            <p class="keyword-hint">Press Enter or click Add. Max 10 keywords.</p>
+          </div>
+        </div>
+
+        <!-- Politics -->
+        <div class="category-card" data-category="politics">
+          <div class="category-header">
+            <div class="category-icon politics">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="category-info">
+              <span class="category-name">Politics</span>
+              <span class="keyword-count"></span>
+            </div>
+            <label class="toggle-switch" aria-label="Toggle Politics">
+              <input type="checkbox" class="category-toggle" data-category="politics">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="keyword-section hidden">
+            <div class="keyword-tags" data-category="politics"></div>
+            <div class="keyword-input-row">
+              <input type="text" class="keyword-input" placeholder="Add a keyword…" maxlength="50" data-category="politics">
+              <button class="btn btn-sm btn-secondary add-keyword-btn" data-category="politics">Add</button>
+            </div>
+            <p class="keyword-hint">Press Enter or click Add. Max 10 keywords.</p>
+          </div>
+        </div>
+
+        <!-- Entertainment -->
+        <div class="category-card" data-category="entertainment">
+          <div class="category-header">
+            <div class="category-icon entertainment">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
+            </div>
+            <div class="category-info">
+              <span class="category-name">Entertainment</span>
+              <span class="keyword-count"></span>
+            </div>
+            <label class="toggle-switch" aria-label="Toggle Entertainment">
+              <input type="checkbox" class="category-toggle" data-category="entertainment">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="keyword-section hidden">
+            <div class="keyword-tags" data-category="entertainment"></div>
+            <div class="keyword-input-row">
+              <input type="text" class="keyword-input" placeholder="Add a keyword…" maxlength="50" data-category="entertainment">
+              <button class="btn btn-sm btn-secondary add-keyword-btn" data-category="entertainment">Add</button>
+            </div>
+            <p class="keyword-hint">Press Enter or click Add. Max 10 keywords.</p>
+          </div>
+        </div>
+
+      </div><!-- /categories-grid -->
+
+      <div class="interests-actions">
+        <button class="btn btn-primary" id="save-preferences-btn">
+          <span class="btn-text">Save &amp; Refresh News</span>
+          <span class="btn-spinner hidden"></span>
+        </button>
+        <span id="save-status" class="save-status"></span>
+      </div>
+    </section>
+
+    <!-- ── News Feed ─────────────────────────────────────────────────── -->
+    <section class="panel news-panel">
+      <div class="news-panel-header">
+        <h2 class="panel-title">Your News Feed</h2>
+        <button class="btn btn-outline btn-sm" id="refresh-news-btn" title="Refresh news">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          Refresh
+        </button>
+      </div>
+      <div id="mock-notice" class="alert alert-info hidden">
+        Showing demo articles. Add your <strong>NEWS_API_KEY</strong> in <code>.env</code> for live news.
+      </div>
+      <div id="news-container">
+        <div class="news-empty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          <p>Select at least one area of interest and save your preferences to see news here.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
